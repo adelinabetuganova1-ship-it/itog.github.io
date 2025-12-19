@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Великие писатели</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.7;
+  color: #2c2620;
+  background-color: #dbdbdb;
+}
+
+
+.scroll {
+  padding: 90px 20px;
+  max-width: 850px;
+  margin: 0 auto;
+  border-bottom: 1px solid #e8e0d0;
+}
+
+h1 {
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: normal;
+  color: #221e1a;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  font-weight: normal;
+  color: #3a3328;
+}
+
+p {
+  font-size: 1.15rem;
+  text-align: justify;
+  margin-bottom: 20px;
+  color: #4a4238;
+}
+
+
+.quote {
+  margin-bottom: 40px;
+  padding: 25px;
+  border-left: 4px solid #e2e2e2;
+  background: #fdfcf8;
+}
+.author {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px;
+  font-style: normal;
+}
+
+
+.writers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 30px;
+}
+.writer-card {
+  width: 260px;
+  text-align: center;
+}
+.writer-card p {
+  text-align: center;
+}
+
+
+.writer-detail {
+  margin-bottom: 60px;
+}
+.book-title {
+  display: block;
+  font-style: italic;
+  color: #6b5a47;
+  font-size: 1.2rem;
+  margin-top: 12px;
+}
+
+
+.tip-list {
+  list-style: none;
+  margin-top: 30px;
+}
+.tip-list li {
+  padding: 15px 0 15px 50px;
+  position: relative;
+  font-size: 1.15rem;
+  border-bottom: 1px dashed #e0d8c8;
+}
+.tip-list li:last-child {
+  border-bottom: none;
+}
+.tip-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: #9b9a9a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+
+.conclusion p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+  .writers-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .writer-card {
+    width: 90%;
+  }
+  h1 {
+    font-size: 2.1rem;
+  }
+}
+
+
+.site-header {
+  background-color: #2c2620;
+  color: #f8f5f0;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0;
+  color: #f8f5f0;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #e0d8c8;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  color: #f8f5f0;
+}
+
+
+main {
+  margin-top: 80px; 
+}
+
+.scroll {
+  padding: 70px 20px;
+  max-width: 850px;
+  margin: 0 auto;
+  border-bottom: 1px solid #e8e0d0;
+}
+
+#quotes {
+  border-top: none;
+}
+
+
+  </style>
+</head>
+<body>
+    
+   
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <h1>Великие писатели</h1>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#quotes">Цитаты</a></li>
+          <li><a href="#writers">Писатели</a></li>
+          <li><a href="#details">Наследие</a></li>
+          <li><a href="#tips">Советы</a></li>
+          <li><a href="#conclusion">Вывод</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  </main>
+
+  <section class="scroll quotes">
+    <h1>О писательстве</h1>
+    <div class="quote">
+      <p>«Писать — значит бороться с тьмой, что в нас и вокруг. Слово — это свет в этой борьбе».</p>
+      <p class="author">— Василий Гроссман</p>
+    </div>
+    <div class="quote">
+      <p>«Писатель — это человек, который пишет не потому, что хочет, а потому, что должен».</p>
+      <p class="author">— Лев Толстой</p>
+    </div>
+    <div class="quote">
+      <p>«Книга — это зеркало: если в неё смотрится обезьяна, то оттуда не выглянет апостол».</p>
+      <p class="author">— Карл Краус</p>
+    </div>
+  </section>
+
+  <section class="scroll writers">
+    <h1>Три столпа русской литературы</h1>
+    <div class="writers-grid">
+      <div class="writer-card">
+        <h2>Лев Толстой</h2>
+        <p>Родился в 1828 году. Граф, педагог, философ. Автор эпических романов о судьбе человека и нации.</p>
+      </div>
+      <div class="writer-card">
+        <h2>Фёдор Достоевский</h2>
+        <p>Родился в 1821 году. Исследователь глубин человеческой души, мастер психологического напряжения.</p>
+      </div>
+      <div class="writer-card">
+        <h2>Александр Пушкин</h2>
+        <p>Родился в 1799 году. Основоположник современного русского литературного языка.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="scroll details">
+    <h1>Их наследие</h1>
+    
+    <div class="writer-detail">
+      <h2>Лев Толстой</h2>
+      <p>Толстой всю жизнь искал правду — в войне, в любви, в крестьянском труде. Его произведения — зеркало эпохи и вечных вопросов.</p>
+      <span class="book-title">«Война и мир»</span>
+    </div>
+
+    <div class="writer-detail">
+      <h2>Фёдор Достоевский</h2>
+      <p>Его герои — преступники, мечтатели, безумцы. Через их страдания Достоевский задаёт главный вопрос: «Если Бога нет, всё дозволено?»</p>
+      <span class="book-title">«Преступление и наказание»</span>
+    </div>
+
+    <div class="writer-detail">
+      <h2>Александр Пушкин</h2>
+      <p>Он создал язык, на котором заговорила вся Россия. Его стихи — душа нации, а проза — школа для будущих писателей.</p>
+      <span class="book-title">«Евгений Онегин»</span>
+    </div>
+  </section>
+
+  <section class="scroll tips">
+    <h1>С чего начать изучать литературу?</h1>
+    <ul class="tip-list">
+      <li>Начните с коротких произведений — рассказов Чехова или стихов Пушкина.</li>
+      <li>Читайте вслух — так вы почувствуете ритм и музыку языка.</li>
+      <li>Не бойтесь перечитывать: каждое прочтение открывает новые смыслы.</li>
+      <li>Заведите дневник читателя — записывайте мысли и цитаты.</li>
+      <li>Обсуждайте книги: литература — это диалог через века.</li>
+    </ul>
+  </section>
+
+  <section class="scroll conclusion">
+    <h1>Заключение</h1>
+    <p>Великие писатели — не просто авторы книг. Они — голос совести, зеркало эпохи, проводники в глубины души. Их слова живут дольше империй, а их вопросы остаются актуальными спустя столетия. Читая их, мы не просто узнаём историю — мы учимся быть человеком.</p>
+  </section>
+
+</body>
+</html>
